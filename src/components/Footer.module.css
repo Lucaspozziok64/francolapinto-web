@@ -10,6 +10,7 @@
 .footerContent {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
@@ -17,6 +18,13 @@
   width: 80px;
   height: auto;
   margin-bottom: 15px;
+}
+
+.footerLogoWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 .footerText {

@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer className={styles.footer}>
       <div className={styles.footerContent}>
-        <div className="w-100">
+        <div className={styles.footerLogoWrapper}>
           <img
             src="/favicon.svg"
             alt="Logo de Colapinto"
