@@ -1,0 +1,198 @@
+{
+  "results": [
+    {
+      "round": 1,
+      "gp": "Gran Premio de Australia",
+      "flag": "🇦🇺",
+      "circuit": "Melbourne",
+      "date": "6-8 Mar 2026",
+      "pos": 12,
+      "pts": 0,
+      "grid": 14,
+      "status": "Finished"
+    },
+    {
+      "round": 2,
+      "gp": "Gran Premio de China",
+      "flag": "🇨🇳",
+      "circuit": "Shanghai",
+      "date": "13-15 Mar 2026",
+      "pos": 10,
+      "pts": 1,
+      "grid": 11,
+      "status": "Finished"
+    },
+    {
+      "round": 3,
+      "gp": "Gran Premio de Japón",
+      "flag": "🇯🇵",
+      "circuit": "Suzuka",
+      "date": "27-29 Abr 2026",
+      "pos": 15,
+      "pts": 0,
+      "grid": 12,
+      "status": "Finished"
+    },
+    {
+      "round": 4,
+      "gp": "Gran Premio de Bahréin",
+      "flag": "🇧🇭",
+      "circuit": "Sakhir",
+      "date": "10-12 Abr 2026",
+      "pos": 0,
+      "pts": 0,
+      "grid": 0,
+      "status": "canceled"
+    },
+    {
+      "round": 5,
+      "gp": "Gran Premio de Arabia Saudita",
+      "flag": "🇸🇦",
+      "circuit": "Jeddah",
+      "date": "17-19 Abr 2026",
+      "pos": 0,
+      "pts": 0,
+      "grid": 0,
+      "status": "canceled"
+    },
+    {
+      "round": 6,
+      "gp": "Gran Premio de Miami",
+      "flag": "🇺🇸",
+      "circuit": "Miami",
+      "date": "1-3 May 2026",
+      "pos": 7,
+      "pts": 6,
+      "grid": 8,
+      "status": "Finished"
+    }
+  ],
+  "upcoming": [
+    {
+      "round": 7,
+      "gp": "Gran Premio de Canadá",
+      "flag": "🇨🇦",
+      "circuit": "Montreal (Sprint)",
+      "date": "22-24 May 2026"
+    },
+    {
+      "round": 8,
+      "gp": "Gran Premio de Mónaco",
+      "flag": "🇲🇨",
+      "circuit": "Monaco",
+      "date": "5-7 Jun 2026"
+    },
+    {
+      "round": 9,
+      "gp": "Gran Premio de España",
+      "flag": "🇪🇸",
+      "circuit": "Barcelona-Catalunya",
+      "date": "12-14 Jun 2026"
+    },
+    {
+      "round": 10,
+      "gp": "Gran Premio de Austria",
+      "flag": "🇦🇹",
+      "circuit": "Spielberg",
+      "date": "26-28 Jun 2026"
+    },
+    {
+      "round": 11,
+      "gp": "Gran Premio de Gran Bretaña",
+      "flag": "🇬🇧",
+      "circuit": "Silverstone (Sprint)",
+      "date": "3-5 Jul 2026"
+    },
+    {
+      "round": 12,
+      "gp": "Gran Premio de Bélgica",
+      "flag": "🇧🇪",
+      "circuit": "Spa-Francorchamps",
+      "date": "17-19 Jul 2026"
+    },
+    {
+      "round": 13,
+      "gp": "Gran Premio de Hungría",
+      "flag": "🇭🇺",
+      "circuit": "Budapest",
+      "date": "24-26 Jul 2026"
+    },
+    {
+      "round": 14,
+      "gp": "Gran Premio de Holanda",
+      "flag": "🇳🇱",
+      "circuit": "Zandvoort (Sprint)",
+      "date": "21-23 Ago 2026"
+    },
+    {
+      "round": 15,
+      "gp": "Gran Premio de Italia",
+      "flag": "🇮🇹",
+      "circuit": "Monza",
+      "date": "4-6 Sep 2026"
+    },
+    {
+      "round": 16,
+      "gp": "Gran Premio de España",
+      "flag": "🇪🇸",
+      "circuit": "Madrid",
+      "date": "11-13 Sep 2026"
+    },
+    {
+      "round": 17,
+      "gp": "Gran Premio de Azerbaiyán",
+      "flag": "🇦🇿",
+      "circuit": "Bakú",
+      "date": "24-26 Sep 2026"
+    },
+    {
+      "round": 18,
+      "gp": "Gran Premio de Singapur",
+      "flag": "🇸🇬",
+      "circuit": "Singapore (Sprint)",
+      "date": "9-11 Oct 2026"
+    },
+    {
+      "round": 19,
+      "gp": "Gran Premio de Estados Unidos",
+      "flag": "🇺🇸",
+      "circuit": "Austin",
+      "date": "23-25 Oct 2026"
+    },
+    {
+      "round": 20,
+      "gp": "Gran Premio de México",
+      "flag": "🇲🇽",
+      "circuit": "Ciudad de México",
+      "date": "30-1 Nov 2026"
+    },
+    {
+      "round": 21,
+      "gp": "Gran Premio de Brasil",
+      "flag": "🇧🇷",
+      "circuit": "São Paulo",
+      "date": "6-8 Nov 2026"
+    },
+    {
+      "round": 22,
+      "gp": "Gran Premio de Estados Unidos",
+      "flag": "🇺🇸",
+      "circuit": "Las Vegas",
+      "date": "19-21 Nov 2026"
+    },
+    {
+      "round": 23,
+      "gp": "Gran Premio de Qatar",
+      "flag": "🇶🇦",
+      "circuit": "Lusail",
+      "date": "27-29 Nov 2026"
+    },
+    {
+      "round": 24,
+      "gp": "Gran Premio de Abu Dhabi",
+      "flag": "🇦🇪",
+      "circuit": "Yas Marina",
+      "date": "4-6 Dic 2026"
+    }
+  ]
+}

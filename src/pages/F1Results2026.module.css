@@ -1,0 +1,292 @@
+.page {
+  padding-bottom: 64px;
+  margin-bottom: 30px;
+}
+
+.header {
+  padding: 56px 40px 40px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 40px;
+  position: relative;
+  overflow: hidden;
+  background-image: url("https://tn.com.ar/resizer/v2/franco-colapinto-hizo-una-exhibicion-historica-en-buenos-aires-foto-x-alpinef1team-XZZX7F5IQJH3LBZGHFTSRLVSS4.jpg?auth=c6f3afb2b4c19cd84f3d764b12c27b23a5dd5af8ec4bdde9f8ab00943c533c7c&width=1440");
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.header::before {
+  content: "F1";
+  position: absolute;
+  right: 40px;
+  top: -10px;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 180px;
+  color: rgba(225, 6, 0, 0.04);
+  line-height: 1;
+  user-select: none;
+}
+
+.eyebrow {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 12px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--text);
+  margin-bottom: 12px;
+}
+
+.title {
+  font-family: "Bruno Ace", sans-serif;
+  font-size: clamp(40px, 6vw, 64px);
+  letter-spacing: 3px;
+  line-height: 1;
+  color: var(--red);
+  margin-bottom: 12px;
+}
+.title span {
+  color: var(--red);
+}
+
+.sub {
+  font-size: 14px;
+  color: var(--text);
+}
+
+.content {
+  padding: 0 40px;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 40px;
+}
+.statCard {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-top: 3px solid var(--red);
+  padding: 20px 16px;
+  border-radius: 3px;
+  text-align: center;
+}
+.statVal {
+  font-family: "Bruno Ace", sans-serif;
+  font-size: 36px;
+  letter-spacing: 2px;
+  color: var(--text);
+  line-height: 1;
+}
+.statLbl {
+  font-size: 11px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-top: 6px;
+}
+
+/* TABLE */
+.tableWrap {
+  overflow-x: auto;
+  margin-bottom: 40px;
+  border: 1px solid var(--border);
+  border-radius: 3px;
+}
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+.table th {
+  text-align: left;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--border);
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 400;
+  white-space: nowrap;
+  background: var(--card);
+}
+.table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid rgba(37, 37, 37, 0.6);
+  color: var(--text);
+  vertical-align: middle;
+}
+.table tr:last-child td {
+  border-bottom: none;
+}
+.table tr:hover td {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.round {
+  color: var(--muted);
+  font-size: 12px;
+  font-family: 'Bruno Ace', sans-serif;
+}
+
+.gp {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.gpFlag {
+  font-size: 18px;
+}
+.gpDate {
+  font-size: 11px;
+  color: var(--muted);
+  margin-left: 4px;
+  white-space: nowrap;
+}
+
+.grid {
+  color: var(--muted);
+  font-size: 12px;
+  font-family: 'Bruno Ace', sans-serif;
+}
+
+.posBadge {
+  display: inline-block;
+  font-family: "Bruno Ace", sans-serif;
+  font-size: 16px;
+  letter-spacing: 1px;
+  padding: 2px 10px;
+  border-radius: 2px;
+}
+.posGold {
+  color: var(--gold);
+  background: rgba(201, 168, 76, 0.1);
+}
+.posPts {
+  color: #ff6666;
+  background: var(--red-dim);
+}
+.posOut {
+  color: var(--muted);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.ptsGot {
+  font-family: 'Bruno Ace', sans-serif;
+  background: var(--red-dim);
+  color: #ff6666;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 3px 8px;
+  border-radius: 2px;
+}
+.ptsZero {
+  color: var(--muted);
+  font-size: 13px;
+}
+.status {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+/* UPCOMING */
+.upcomingList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 32px;
+}
+.upCard {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: border-color 0.2s;
+}
+.upCard:hover {
+  border-color: rgba(119, 8, 119, 0.644);
+}
+.upLeft {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.upFlag {
+  font-size: 22px;
+}
+.upGp {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text);
+}
+.upMeta {
+  font-size: 12px;
+  color: var(--muted);
+  margin-top: 2px;
+}
+.upRound {
+  font-family: "Bruno Ace", sans-serif;
+  font-size: 14px;
+  letter-spacing: 1px;
+  color: var(--red);
+  background: var(--red-dim);
+  padding: 4px 10px;
+  border-radius: 2px;
+}
+
+.apiNote {
+  font-size: 13px;
+  color: var(--muted);
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  padding: 14px 18px;
+}
+.apiNote code {
+  font-family: monospace;
+  color: #80b3ff;
+  font-size: 12px;
+}
+
+.canceledRow {
+  opacity: 0.6;
+}
+
+.canceledBadge {
+  display: inline-block;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 14px;
+  letter-spacing: 1px;
+  padding: 2px 10px;
+  border-radius: 2px;
+  color: #888;
+  background: rgba(136, 136, 136, 0.1);
+}
+
+.statusCanceled {
+  color: #888;
+}
+
+.canceledRow:hover td {
+  background: rgba(255, 255, 255, 0.01);
+}
+
+@media (max-width: 768px) {
+  .header,
+  .content {
+    padding-left: 20px;
+    padding-right: 20px;
+    max-height: 40vh !important;
+    min-width: 100% !important;
+  }
+  .statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

@@ -1,0 +1,139 @@
+.page {
+  padding-bottom: 64px;
+}
+
+.header {
+  padding: 56px 40px 40px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 40px;
+  position: relative;
+  overflow: hidden;
+  background-image: url("https://media.ambito.com/p/862b0ee03cf7998bbb07d0f318917f6a/adjuntos/239/imagenes/042/142/0042142685/colapinto-alpinejpg.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.header::before {
+  content: "43";
+  position: absolute;
+  right: 40px;
+  top: -20px;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 200px;
+  color: rgba(225, 6, 0, 0.04);
+  line-height: 1;
+  user-select: none;
+  pointer-events: none;
+}
+
+.eyebrow {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 12px;
+  letter-spacing: 2.5px;
+  text-transform: uppercase;
+  color: var(--text);
+  margin-bottom: 12px;
+}
+
+.title {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: clamp(36px, 5vw, 58px);
+  letter-spacing: 3px;
+  line-height: 0.95;
+  color: var(--text);
+  margin-bottom: 16px;
+}
+.title span {
+  color: var(--red);
+}
+
+.sub {
+  font-size: 15px;
+  color: var(--text);
+  max-width: 600px;
+  line-height: 1.7;
+}
+
+.content {
+  padding: 0 40px;
+}
+
+.timeline {
+  position: relative;
+  padding-left: 28px;
+}
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 9px;
+  top: 6px;
+  bottom: 6px;
+  width: 1px;
+  background: var(--border);
+}
+
+.tlItem {
+  position: relative;
+  margin-bottom: 32px;
+  display: flex;
+  gap: 0;
+}
+
+.tlDot {
+  position: absolute;
+  left: -23px;
+  top: 5px;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: var(--red);
+  border: 2px solid var(--dark);
+  flex-shrink: 0;
+  box-shadow: 0 0 0 1px var(--red);
+}
+
+.tlBody {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  padding: 20px;
+  flex: 1;
+  transition: border-color 0.2s;
+}
+.tlBody:hover {
+  border-color: rgba(119, 8, 119, 0.644);
+}
+
+.tlYear {
+  font-family: "Bruno Ace", sans-serif;
+  font-size: 15px;
+  letter-spacing: 2px;
+  color: var(--gold);
+  margin-bottom: 6px;
+}
+
+.tlTitle {
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 19px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.tlDesc {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+@media (max-width: 768px) {
+  .header,
+  .content {
+    padding-left: 20px;
+    padding-right: 20px;
+    max-height: 40vh !important;
+  }
+}

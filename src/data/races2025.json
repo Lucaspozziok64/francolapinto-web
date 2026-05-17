@@ -1,0 +1,31 @@
+{
+  "results": [
+    { "round": 1, "gp": "Gran Premio de Italia", "flag": "🇮🇹", "circuit": "Monza", "date": "1 Sep 2024", "pos": 12, "pts": 0, "grid": 18, "status": "Finished", "team": "Williams", "winner": "Leclerc" },
+    { "round": 2, "gp": "Gran Premio de Azerbaiyán", "flag": "🇦🇿", "circuit": "Bakú", "date": "15 Sep 2024", "pos": 8, "pts": 4, "grid": 15, "status": "Finished", "team": "Williams", "winner": "Piastri" },
+    { "round": 3, "gp": "Gran Premio de Singapur", "flag": "🇸🇬", "circuit": "Marina Bay", "date": "22 Sep 2024", "pos": 11, "pts": 0, "grid": 12, "status": "Finished", "team": "Williams", "winner": "Norris" },
+    { "round": 4, "gp": "Gran Premio de Estados Unidos", "flag": "🇺🇸", "circuit": "Austin", "date": "20 Oct 2024", "pos": 10, "pts": 1, "grid": 14, "status": "Finished", "team": "Williams", "winner": "Leclerc" },
+    { "round": 5, "gp": "Gran Premio de México", "flag": "🇲🇽", "circuit": "Ciudad de México", "date": "27 Oct 2024", "pos": 12, "pts": 0, "grid": 16, "status": "Finished", "team": "Williams", "winner": "Sainz" },
+    { "round": 6, "gp": "Gran Premio de Brasil", "flag": "🇧🇷", "circuit": "São Paulo", "date": "3 Nov 2024", "pos": 20, "pts": 0, "grid": 18, "status": "DNF", "team": "Williams", "winner": "Verstappen" },
+    { "round": 7, "gp": "Gran Premio de Las Vegas", "flag": "🇺🇸", "circuit": "Las Vegas", "date": "24 Nov 2024", "pos": 14, "pts": 0, "grid": 16, "status": "Finished", "team": "Williams", "winner": "Russell" },
+    { "round": 8, "gp": "Gran Premio de Qatar", "flag": "🇶🇦", "circuit": "Losail", "date": "1 Dec 2024", "pos": 20, "pts": 0, "grid": 17, "status": "DNF", "team": "Williams", "winner": "Verstappen" },
+    { "round": 9, "gp": "Gran Premio de Abu Dhabi", "flag": "🇦🇪", "circuit": "Yas Marina", "date": "8 Dec 2024", "pos": 20, "pts": 0, "grid": 19, "status": "DNF", "team": "Williams", "winner": "Norris" },
+    { "round": 10, "gp": "Gran Premio de Emilia-Romaña", "flag": "🇮🇹", "circuit": "Imola", "date": "18 May 2025", "pos": 16, "pts": 0, "grid": 18, "status": "Finished", "team": "Alpine", "winner": "Verstappen" },
+    { "round": 11, "gp": "Gran Premio de Mónaco", "flag": "🇲🇨", "circuit": "Monte Carlo", "date": "25 May 2025", "pos": 13, "pts": 0, "grid": 15, "status": "Finished", "team": "Alpine", "winner": "Norris" },
+    { "round": 12, "gp": "Gran Premio de España", "flag": "🇪🇸", "circuit": "Barcelona", "date": "1 Jun 2025", "pos": 15, "pts": 0, "grid": 17, "status": "Finished", "team": "Alpine", "winner": "Piastri" },
+    { "round": 13, "gp": "Gran Premio de Canadá", "flag": "🇨🇦", "circuit": "Montreal", "date": "15 Jun 2025", "pos": 13, "pts": 0, "grid": 14, "status": "Finished", "team": "Alpine", "winner": "Russell" },
+    { "round": 14, "gp": "Gran Premio de Austria", "flag": "🇦🇹", "circuit": "Spielberg", "date": "29 Jun 2025", "pos": 15, "pts": 0, "grid": 16, "status": "Finished", "team": "Alpine", "winner": "Norris" },
+    { "round": 15, "gp": "Gran Premio de Gran Bretaña", "flag": "🇬🇧", "circuit": "Silverstone", "date": "6 Jul 2025", "pos": 20, "pts": 0, "grid": 19, "status": "DNF", "team": "Alpine", "winner": "Norris" },
+    { "round": 16, "gp": "Gran Premio de Bélgica", "flag": "🇧🇪", "circuit": "Spa", "date": "27 Jul 2025", "pos": 19, "pts": 0, "grid": 20, "status": "Finished", "team": "Alpine", "winner": "Piastri" },
+    { "round": 17, "gp": "Gran Premio de Hungría", "flag": "🇭🇺", "circuit": "Budapest", "date": "3 Ago 2025", "pos": 18, "pts": 0, "grid": 17, "status": "Finished", "team": "Alpine", "winner": "Norris" },
+    { "round": 18, "gp": "Gran Premio de Países Bajos", "flag": "🇳🇱", "circuit": "Zandvoort", "date": "31 Ago 2025", "pos": 11, "pts": 0, "grid": 14, "status": "Finished", "team": "Alpine", "winner": "Piastri" },
+    { "round": 19, "gp": "Gran Premio de Italia", "flag": "🇮🇹", "circuit": "Monza", "date": "7 Sep 2025", "pos": 17, "pts": 0, "grid": 19, "status": "Finished", "team": "Alpine", "winner": "Verstappen" },
+    { "round": 20, "gp": "Gran Premio de Azerbaiyán", "flag": "🇦🇿", "circuit": "Bakú", "date": "21 Sep 2025", "pos": 19, "pts": 0, "grid": 20, "status": "Finished", "team": "Alpine", "winner": "Verstappen" },
+    { "round": 21, "gp": "Gran Premio de Singapur", "flag": "🇸🇬", "circuit": "Marina Bay", "date": "5 Oct 2025", "pos": 16, "pts": 0, "grid": 18, "status": "Finished", "team": "Alpine", "winner": "Russell" },
+    { "round": 22, "gp": "Gran Premio de Estados Unidos", "flag": "🇺🇸", "circuit": "Austin", "date": "19 Oct 2025", "pos": 17, "pts": 0, "grid": 19, "status": "Finished", "team": "Alpine", "winner": "Verstappen" },
+    { "round": 23, "gp": "Gran Premio de México", "flag": "🇲🇽", "circuit": "Ciudad de México", "date": "26 Oct 2025", "pos": 16, "pts": 0, "grid": 20, "status": "Finished", "team": "Alpine", "winner": "Norris" },
+    { "round": 24, "gp": "Gran Premio de Brasil", "flag": "🇧🇷", "circuit": "São Paulo", "date": "9 Nov 2025", "pos": 15, "pts": 0, "grid": 17, "status": "Finished", "team": "Alpine", "winner": "Norris" },
+    { "round": 25, "gp": "Gran Premio de Las Vegas", "flag": "🇺🇸", "circuit": "Las Vegas", "date": "22 Nov 2025", "pos": 17, "pts": 0, "grid": 19, "status": "Finished", "team": "Alpine", "winner": "Verstappen" },
+    { "round": 26, "gp": "Gran Premio de Qatar", "flag": "🇶🇦", "circuit": "Losail", "date": "30 Nov 2025", "pos": 14, "pts": 0, "grid": 16, "status": "Finished", "team": "Alpine", "winner": "Verstappen" },
+    { "round": 27, "gp": "Gran Premio de Abu Dhabi", "flag": "🇦🇪", "circuit": "Yas Marina", "date": "7 Dec 2025", "pos": 20, "pts": 0, "grid": 20, "status": "Finished", "team": "Alpine", "winner": "Verstappen" }
+  ]
+}
