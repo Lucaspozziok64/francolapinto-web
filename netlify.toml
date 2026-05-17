@@ -1,0 +1,11 @@
+[[headers]]
+  # Para los archivos estáticos con hash
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  # Para el archivo HTML principal
+  for = "/*"
+  [headers.values]
+    Cache-Control = "no-cache, must-revalidate"
