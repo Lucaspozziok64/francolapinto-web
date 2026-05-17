@@ -2,13 +2,12 @@
   "name": "frontend",
   "private": true,
   "version": "0.0.0",
-  "type": "commonjs",
+  "type": "module",
   "scripts": {
-    "dev": "vite --force",
+    "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview",
-    "dev.clear": "vite --force --clearScreen false"
+    "preview": "vite preview"
   },
   "dependencies": {
     "bootstrap": "^5.3.8",
