@@ -6,10 +6,12 @@ import F1Results2026 from "./pages/F1Results2026";
 import PartnerSponsors from "./pages/PartnerSponsors";
 import History from "./pages/History";
 import ScrollToTop from "./components/ScrollToTop";
+import InstallPrompt from "./components/InstallPrompt";
 
 function App() {
   return (
     <>
+      <InstallPrompt />
       <BrowserRouter>
         <Navbar />
         <main>
