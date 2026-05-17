@@ -11,19 +11,19 @@ import InstallPrompt from "./components/InstallPrompt";
 function App() {
   return (
     <>
-    <InstallPrompt />
+      <InstallPrompt />
       <BrowserRouter>
-      <Navbar />
-      <main>
-        <ScrollToTop />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/f1-2025" element={<F1Results />} />
-          <Route path="/f1-2026" element={<F1Results2026 />} />
-          <Route path="/partner-sponsor" element={<PartnerSponsors />} />
-          <Route path="/history" element={<History />} />
-        </Routes>
-      </main>
+        <Navbar />
+        <main>
+          <ScrollToTop />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/f1-2025" element={<F1Results />} />
+            <Route path="/f1-2026" element={<F1Results2026 />} />
+            <Route path="/partner-sponsor" element={<PartnerSponsors />} />
+            <Route path="/history" element={<History />} />
+          </Routes>
+        </main>
       </BrowserRouter>
     </>
   );

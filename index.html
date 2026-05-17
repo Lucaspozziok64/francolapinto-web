@@ -22,5 +22,18 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+    <script>
+      // Forzar recarga limpia si hay error de módulo
+      window.addEventListener("error", function (e) {
+        if (e.message && e.message.includes("MIME type")) {
+          localStorage.setItem("forceReload", "true");
+          window.location.reload(true);
+        }
+      });
+
+      if (localStorage.getItem("forceReload")) {
+        localStorage.removeItem("forceReload");
+      }
+    </script>
   </body>
 </html>
