@@ -54,6 +54,7 @@ export default function Home() {
           </div>
 
           <div className={styles.heroContent}>
+            <img src="/circuits/logof1.webp" alt="" className={styles.f1Logo} />
             <div className={styles.heroEyebrow}>
               <span className={styles.alpineTag}>
                 <img

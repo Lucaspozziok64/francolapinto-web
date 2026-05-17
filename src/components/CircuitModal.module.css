@@ -76,7 +76,6 @@
 .modalFlag {
   font-size: 48px;
   display: block;
-  margin-bottom: 12px;
 }
 
 .modalHeader h2 {
@@ -210,6 +209,19 @@
 .raceItem .scheduleTime {
   background: rgba(201, 168, 76, 0.15);
   color: var(--gold);
+}
+
+/* Añade esto al final de CircuitModal.module.css */
+.argentinaBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #75aadb 0%, #4d8ed9 100%);
+  padding: 6px 16px;
+  border-radius: 30px;
+  font-size: 14px;
+  color: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 @media (max-width: 768px) {

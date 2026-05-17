@@ -55,7 +55,7 @@
   letter-spacing: 1.5px;
   text-transform: uppercase;
   color: var(--muted);
-  padding: 10px 11px;
+  padding: 9px 8px;
   border-bottom: 3px solid transparent;
   transition: color 0.2s, border-color 0.2s;
   white-space: nowrap;
