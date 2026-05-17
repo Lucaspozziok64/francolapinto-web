@@ -5,11 +5,7 @@ const Footer = () => {
     <footer className={styles.footer}>
       <div className={styles.footerContent}>
         <div className={styles.footerLogoWrapper}>
-          <img
-            src="/favicon.svg"
-            alt="Logo de Colapinto"
-            className={`img-fluid ${styles.footerLogo}`}
-          />
+         <span className={styles.logo}>FC43</span>
         </div>
 
         <p className={styles.footerText}>
