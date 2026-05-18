@@ -1,8 +1,9 @@
 import SectionLabel from "../components/SectionLabel";
-import styles from "./Home.module.css"
+import styles from "./Home.module.css";
 import racesData2026 from "../data/races2026.json";
 import { NavLink } from "react-router";
 import Footer from "../components/Footer";
+import { useState } from "react";
 
 const races2026 = racesData2026.results[racesData2026.results.length - 1];
 const nextRace2026 = racesData2026.upcoming[0];
@@ -22,6 +23,29 @@ function getPosClass(pos) {
 }
 
 export default function Home() {
+  const [modalOpen, setModalOpen] = useState(false);
+  const [currentVideoSrc, setCurrentVideoSrc] = useState("");
+
+  function openModal(videoKey) {
+    if (videoKey === "video1") {
+      setCurrentVideoSrc(
+        "https://res.cloudinary.com/dduqetzqk/video/upload/v1779119852/SnapInsta.to_AQOK-LHxK70GNvRN_Jy5Wch8_o3YH3uln0aV5zHbpjkNtra_3DpmmMBnPFnP9KATViWe52mbmU1JFCTqQZPCpgjxMXeVVSaDgAlKUw8_ljqrzm.mp4",
+      );
+    }
+    if (videoKey == "video2") {
+      setCurrentVideoSrc(
+        "https://res.cloudinary.com/dduqetzqk/video/upload/v1779121780/SnapInsta.to_AQNXtXuH2yfdfQFIxjyJbZXKCoAaK42YcFWz9-QbLavGoQGuDeDJhdAmOA_liB5_a3xPzjdMWlZG1HsDonM6wr2cVKDFrFhrfWnY1sk_grvcwz.mp4",
+      );
+    } else if (videoKey === "video3") {
+      setCurrentVideoSrc("https://res.cloudinary.com/dduqetzqk/video/upload/v1779121971/SnapInsta.to_AQM6hXJ2W9sX9z16sSdLd9FraEre2h0zFkieWddaO8KcKkeoBuYDJw80G9vbOmKM1f944uWZ2ALFuFyXAvRwnF-fGh90pRtI1IqZ9Rs_ednpcj.mp4");
+    }
+    setModalOpen(true);
+  }
+
+  function closeModal() {
+    setModalOpen(false);
+    setCurrentVideoSrc("");
+  }
   return (
     <>
       <div className={`${styles.page} page-enter`}>
@@ -72,7 +96,8 @@ export default function Home() {
               <span className={styles.heroRed}>COLAPINTO</span>
             </h1>
             <p className={styles.heroSub}>
-              Número <strong className="bruno-ace-regular">#43</strong> · Piloto titular · Alpine Racing
+              Número <strong className="bruno-ace-regular">#43</strong> · Piloto
+              titular · Alpine Racing
             </p>
             <div className={styles.heroCtas}>
               <NavLink to="/history" className={styles.ctaPrimary}>
@@ -89,9 +114,7 @@ export default function Home() {
         <section className={styles.section}>
           <SectionLabel>Última carrera disputada</SectionLabel>
 
-          <div
-            className={styles.lastRaceCard}
-          >
+          <div className={styles.lastRaceCard}>
             <div className={styles.lrLeft}>
               <div className={styles.lrFlag}>{races2026.flag}</div>
               <div>
@@ -198,6 +221,87 @@ export default function Home() {
           </div>
         </section>
       </div>
+      {/* ── EXHIBICIÓN BS AS ── */}
+      <section className={styles.section}>
+        <SectionLabel>🇦🇷 Colapinto en las calles de CABA</SectionLabel>
+        <div className={styles.expoGrid}>
+          <div className={styles.expoCard} onClick={() => openModal("video1")}>
+            <img
+              src="https://res.cloudinary.com/dduqetzqk/image/upload/v1779120810/SnapInsta.to_674549225_18585799516008402_2389487927485289870_n_1080_ugzxlv.jpg"
+              alt="Auto V8 saliendo"
+            />
+            <div className={styles.playIcon}>▶</div>
+            <img src="/circuits/logof1.webp" alt="Imagen de Colapinto" className={styles.f1Logo} />
+          </div>
+          <div className={styles.expoCard}>
+            <img
+              src="https://res.cloudinary.com/dduqetzqk/image/upload/v1779123860/SnapInsta.to_675363519_18585799504008402_5494057017362921771_n_xi9n70.jpg"
+              alt="Auto V8 saliendo"
+            />
+            <img src="/circuits/logof1.webp" alt="Imagen de Colapinto" className={styles.f1Logo} />
+          </div>
+          <div className={styles.expoCard}>
+            <img
+              src="https://res.cloudinary.com/dduqetzqk/image/upload/v1779123865/SnapInsta.to_682115355_18585799495008402_8730395449085486051_n_bx74jw.jpg"
+              alt="Colapinto con los autos"
+            />
+            <img src="/circuits/logof1.webp" alt="Imagen de Colapinto" className={styles.f1Logo} />
+          </div>
+          <div className={styles.expoCard}>
+            <img
+              src="https://res.cloudinary.com/dduqetzqk/image/upload/v1779123845/SnapInsta.to_675460992_18585799585008402_8306726373912183576_n_qu8tbh.jpg"
+              alt="Colapinto con los autos"
+            />
+            <img src="/circuits/logof1.webp" alt="Imagen de Colapinto" className={styles.f1Logo} />
+          </div>
+          <div className={styles.expoCard}>
+            <img
+              src="https://res.cloudinary.com/dduqetzqk/image/upload/v1779123838/SnapInsta.to_682077512_18585799573008402_8721296666406986794_n_famdxe.jpg"
+              alt="Colapinto con los autos"
+            />
+            <img src="/circuits/logof1.webp" alt="Imagen de Colapinto" className={styles.f1Logo} />
+          </div>
+        </div>
+      </section>
+      {/* ── EXHIBICIÓN BS AS ── */}
+      <section className={styles.section}>
+        <SectionLabel>🇦🇷 Exhibición en Buenos Aires 2026</SectionLabel>
+        <div className={styles.expoGrid}>
+          <div className={styles.expoCard} onClick={() => openModal("video2")}>
+            <img
+              src="https://media.tycsports.com/files/2026/04/26/944370/buenos-aires-se-paraliza-por-una-multitudinaria-exhibicion-callejera-de-franco-colapinto_1440x810_wmk.webp"
+              alt="Colapinto con los autos"
+            />
+            <div className={styles.playIcon}>▶</div>
+            <p className="bruno-ace-regular">Road Show sin manos🚀</p>
+          </div>
+          <div className={styles.expoCard} onClick={() => openModal("video3")}>
+            <img
+              src="https://lavozdetarija.com/wp-content/uploads/2026/04/Colapinto-BsAS.jpg"
+              alt="Colapinto con los autos"
+            />
+            <div className={styles.playIcon}>▶</div>
+            <p className="bruno-ace-regular">Road Show 🚀</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Modal (al final del div .page o antes del Footer) */}
+      {modalOpen && (
+        <div className={styles.modal} onClick={closeModal}>
+          <div
+            className={styles.modalContent}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button className={styles.closeModal} onClick={closeModal}>
+              ✕
+            </button>
+            <video controls autoPlay>
+              <source src={currentVideoSrc} type="video/mp4" />
+            </video>
+          </div>
+        </div>
+      )}
       <Footer />
     </>
   );
