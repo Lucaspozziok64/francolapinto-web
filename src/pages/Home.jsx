@@ -38,6 +38,10 @@ export default function Home() {
       );
     } else if (videoKey === "video3") {
       setCurrentVideoSrc("https://res.cloudinary.com/dduqetzqk/video/upload/v1779121971/SnapInsta.to_AQM6hXJ2W9sX9z16sSdLd9FraEre2h0zFkieWddaO8KcKkeoBuYDJw80G9vbOmKM1f944uWZ2ALFuFyXAvRwnF-fGh90pRtI1IqZ9Rs_ednpcj.mp4");
+    } else if (videoKey === "video4") {
+      setCurrentVideoSrc("https://res.cloudinary.com/dduqetzqk/video/upload/v1779128989/SnapInsta.to_AQM3kPD-e4gANOQ0sy6iScuzxPI2-giLfRMtNp8oH1KF53bAayCZOiE2hJ4heRTbQtnhGZZKUTgZuQtXVYfb4E4r6ruuTOHOxJblg04_rfnjdo.mp4")
+    } else if (videoKey === "video5") {
+      setCurrentVideoSrc("https://res.cloudinary.com/dduqetzqk/video/upload/v1779128611/SnapInsta.to_AQNWmmutSWPpj70giQ_v1U4s05OQzMwYaeiWjyYTyjlm9UFngW74-l9sVRzhRd6rieuA48L8ok7_Dwr1--hQ1Hrq5-5go2w4CO75WzY_iklecr.mp4")
     }
     setModalOpen(true);
   }
@@ -278,6 +282,22 @@ export default function Home() {
           <div className={styles.expoCard} onClick={() => openModal("video3")}>
             <img
               src="https://lavozdetarija.com/wp-content/uploads/2026/04/Colapinto-BsAS.jpg"
+              alt="Colapinto con los autos"
+            />
+            <div className={styles.playIcon}>▶</div>
+            <p className="bruno-ace-regular">Road Show 🚀</p>
+          </div>
+          <div className={styles.expoCard} onClick={() => openModal("video4")}>
+            <img
+              src="https://images-tools.cadena3.com/tools/r/67e260ed-99e5-4b7e-b490-8be5aecf9601.jpg?width=1200&height=763"
+              alt="Colapinto con los autos"
+            />
+            <div className={styles.playIcon}>▶</div>
+            <p className="bruno-ace-regular">Road Show 🚀</p>
+          </div>
+          <div className={styles.expoCard} onClick={() => openModal("video5")}>
+            <img
+              src="https://media.minutouno.com/p/72dae3f2cb2cfa6e98a58cffb33b451d/adjuntos/150/imagenes/043/271/0043271304/a-que-hora-empieza-el-road-show-franco-colapinto-buenos-aires.jpg"
               alt="Colapinto con los autos"
             />
             <div className={styles.playIcon}>▶</div>
