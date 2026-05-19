@@ -3,6 +3,8 @@ import styles from "./CircuitModal.module.css";
 
 const CircuitModal = ({ isOpen, onClose, gpData }) => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [showShareMenu, setShowShareMenu] = useState(false);
+  const [shareMessage, setShareMessage] = useState("");
 
   // Cerrar con tecla ESC
   useEffect(() => {
@@ -309,12 +311,128 @@ const CircuitModal = ({ isOpen, onClose, gpData }) => {
     setCurrentImageIndex((prev) => (prev - 1 + images.length) % images.length);
   };
 
+  // ========== FUNCIONES DE COMPARTIR ==========
+
+  // Texto y URL a compartir
+  const shareTitle = `🏁 ${gpData.gp} - Gran Premio de F1 2026`;
+  const shareText = `¡No me pierdo el GP ${gpData.gp} en ${gpData.circuit}! 🏎️💨 Carrera: ${schedule.race}. #F1 #Colapinto #Alpine`;
+  const shareUrl = window.location.href; // URL actual de la página
+  const currentImageUrl = images[currentImageIndex];
+
+  // Mostrar mensaje temporal
+  const showTemporaryMessage = (msg) => {
+    setShareMessage(msg);
+    setTimeout(() => setShareMessage(""), 2000);
+  };
+
+  // Web Share API (móviles/tablets)
+  const handleNativeShare = async () => {
+    try {
+      if (navigator.share) {
+        await navigator.share({
+          title: shareTitle,
+          text: shareText,
+          url: shareUrl,
+        });
+        showTemporaryMessage("✅ ¡Compartido con éxito!");
+      } else {
+        // Si no soporta Web Share, mostrar menú manual
+        setShowShareMenu(!showShareMenu);
+      }
+    } catch (err) {
+      if (err.name !== "AbortError") {
+        console.error("Error al compartir:", err);
+        showTemporaryMessage("❌ Error al compartir");
+      }
+    }
+  };
+
+  // Compartir a Instagram (abre la app o web)
+  const shareToInstagram = () => {
+    // Instagram no permite compartir texto directamente, solo imágenes
+    // Abrimos Instagram Stories o feed
+    const instagramUrl = `instagram://library?AssetPath=${encodeURIComponent(currentImageUrl)}`;
+    const instagramWebUrl = "https://www.instagram.com";
+
+    // Intentar abrir la app, si no, abrir web
+    window.location.href = instagramUrl;
+    setTimeout(() => {
+      window.open(instagramWebUrl, "_blank");
+    }, 500);
+
+    showTemporaryMessage("📸 Abriendo Instagram...");
+    setShowShareMenu(false);
+  };
+
+  // Compartir a TikTok (abre la app)
+  const shareToTikTok = () => {
+    const tiktokUrl = `tiktok://share?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`;
+    const tiktokWebUrl = "https://www.tiktok.com";
+
+    window.location.href = tiktokUrl;
+    setTimeout(() => {
+      window.open(tiktokWebUrl, "_blank");
+    }, 500);
+
+    showTemporaryMessage("🎵 Abriendo TikTok...");
+    setShowShareMenu(false);
+  };
+
+  // Compartir a Facebook
+  const shareToFacebook = () => {
+    const facebookShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}&quote=${encodeURIComponent(shareText)}`;
+    window.open(facebookShareUrl, "_blank", "width=600,height=400");
+    showTemporaryMessage("📘 Abriendo Facebook...");
+    setShowShareMenu(false);
+  };
+
+  // Compartir a Twitter/X
+  const shareToTwitter = () => {
+    const twitterShareUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`;
+    window.open(twitterShareUrl, "_blank", "width=600,height=400");
+    showTemporaryMessage("🐦 Abriendo Twitter...");
+    setShowShareMenu(false);
+  };
+
+  // Compartir a WhatsApp
+  const shareToWhatsApp = () => {
+    const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(shareText + " " + shareUrl)}`;
+    window.open(whatsappUrl, "_blank");
+    showTemporaryMessage("💬 Abriendo WhatsApp...");
+    setShowShareMenu(false);
+  };
+
+  // Compartir a Telegram
+  const shareToTelegram = () => {
+    const telegramUrl = `https://t.me/share/url?url=${encodeURIComponent(shareUrl)}&text=${encodeURIComponent(shareText)}`;
+    window.open(telegramUrl, "_blank");
+    showTemporaryMessage("📱 Abriendo Telegram...");
+    setShowShareMenu(false);
+  };
+
+  // Copiar al portapapeles
+  const copyToClipboard = async () => {
+    try {
+      const textToCopy = `${shareText}\n${shareUrl}`;
+      await navigator.clipboard.writeText(textToCopy);
+      showTemporaryMessage("📋 ¡Copiado al portapapeles!");
+    } catch {
+      showTemporaryMessage("❌ No se pudo copiar");
+    }
+    setShowShareMenu(false);
+  };
+
   return (
     <div className={styles.modalOverlay} onClick={onClose}>
       <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
         <button className={styles.closeBtn} onClick={onClose}>
           ✕
         </button>
+
+        {/* Mensaje temporal flotante */}
+        {shareMessage && (
+          <div className={styles.shareMessage}>{shareMessage}</div>
+        )}
 
         <div className={styles.modalHeader}>
           <span className={styles.modalFlag}>{gpData.flag}</span>
@@ -359,6 +477,38 @@ const CircuitModal = ({ isOpen, onClose, gpData }) => {
               </div>
             ))}
           </div>
+        </div>
+        <div className={styles.shareContainer}>
+          <button className={styles.shareButton} onClick={handleNativeShare}>
+            📤 Compartir este GP
+          </button>
+
+          {/* Menú desplegable de redes sociales */}
+          {showShareMenu && (
+            <div className={styles.shareMenu}>
+              <button onClick={shareToInstagram} className={styles.shareOption}>
+                <span className={styles.shareIcon}>📸</span> Instagram
+              </button>
+              <button onClick={shareToTikTok} className={styles.shareOption}>
+                <span className={styles.shareIcon}>🎵</span> TikTok
+              </button>
+              <button onClick={shareToFacebook} className={styles.shareOption}>
+                <span className={styles.shareIcon}>📘</span> Facebook
+              </button>
+              <button onClick={shareToTwitter} className={styles.shareOption}>
+                <span className={styles.shareIcon}>🐦</span> Twitter/X
+              </button>
+              <button onClick={shareToWhatsApp} className={styles.shareOption}>
+                <span className={styles.shareIcon}>💬</span> WhatsApp
+              </button>
+              <button onClick={shareToTelegram} className={styles.shareOption}>
+                <span className={styles.shareIcon}>📱</span> Telegram
+              </button>
+              <button onClick={copyToClipboard} className={styles.shareOption}>
+                <span className={styles.shareIcon}>📋</span> Copiar enlace
+              </button>
+            </div>
+          )}
         </div>
       </div>
     </div>
