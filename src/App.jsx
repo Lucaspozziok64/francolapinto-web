@@ -8,6 +8,7 @@ import History from "./pages/History";
 import ScrollToTop from "./components/ScrollToTop";
 import InstallPrompt from "./components/InstallPrompt";
 import { CacheBuster } from "@piplup/cache-buster";
+import BtnScroll from "./components/BtnScroll";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
             </Routes>
           </main>
         </BrowserRouter>
+        <BtnScroll />
       </CacheBuster>
     </>
   );
