@@ -37,11 +37,17 @@ export default function Home() {
         "https://res.cloudinary.com/dduqetzqk/video/upload/v1779121780/SnapInsta.to_AQNXtXuH2yfdfQFIxjyJbZXKCoAaK42YcFWz9-QbLavGoQGuDeDJhdAmOA_liB5_a3xPzjdMWlZG1HsDonM6wr2cVKDFrFhrfWnY1sk_grvcwz.mp4",
       );
     } else if (videoKey === "video3") {
-      setCurrentVideoSrc("https://res.cloudinary.com/dduqetzqk/video/upload/v1779121971/SnapInsta.to_AQM6hXJ2W9sX9z16sSdLd9FraEre2h0zFkieWddaO8KcKkeoBuYDJw80G9vbOmKM1f944uWZ2ALFuFyXAvRwnF-fGh90pRtI1IqZ9Rs_ednpcj.mp4");
+      setCurrentVideoSrc(
+        "https://res.cloudinary.com/dduqetzqk/video/upload/v1779121971/SnapInsta.to_AQM6hXJ2W9sX9z16sSdLd9FraEre2h0zFkieWddaO8KcKkeoBuYDJw80G9vbOmKM1f944uWZ2ALFuFyXAvRwnF-fGh90pRtI1IqZ9Rs_ednpcj.mp4",
+      );
     } else if (videoKey === "video4") {
-      setCurrentVideoSrc("https://res.cloudinary.com/dduqetzqk/video/upload/v1779128989/SnapInsta.to_AQM3kPD-e4gANOQ0sy6iScuzxPI2-giLfRMtNp8oH1KF53bAayCZOiE2hJ4heRTbQtnhGZZKUTgZuQtXVYfb4E4r6ruuTOHOxJblg04_rfnjdo.mp4")
+      setCurrentVideoSrc(
+        "https://res.cloudinary.com/dduqetzqk/video/upload/v1779128989/SnapInsta.to_AQM3kPD-e4gANOQ0sy6iScuzxPI2-giLfRMtNp8oH1KF53bAayCZOiE2hJ4heRTbQtnhGZZKUTgZuQtXVYfb4E4r6ruuTOHOxJblg04_rfnjdo.mp4",
+      );
     } else if (videoKey === "video5") {
-      setCurrentVideoSrc("https://res.cloudinary.com/dduqetzqk/video/upload/v1779128611/SnapInsta.to_AQNWmmutSWPpj70giQ_v1U4s05OQzMwYaeiWjyYTyjlm9UFngW74-l9sVRzhRd6rieuA48L8ok7_Dwr1--hQ1Hrq5-5go2w4CO75WzY_iklecr.mp4")
+      setCurrentVideoSrc(
+        "https://res.cloudinary.com/dduqetzqk/video/upload/v1779128611/SnapInsta.to_AQNWmmutSWPpj70giQ_v1U4s05OQzMwYaeiWjyYTyjlm9UFngW74-l9sVRzhRd6rieuA48L8ok7_Dwr1--hQ1Hrq5-5go2w4CO75WzY_iklecr.mp4",
+      );
     }
     setModalOpen(true);
   }
@@ -113,6 +119,38 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        {/* Opción A: Banner estático (más profesional) */}
+        <section className={styles.historicBanner}>
+          <div className={styles.bannerContent}>
+            <span className={styles.bannerBadge}>🏆 HISTÓRICO</span>
+            <span className={styles.bannerText}>
+              Franco Colapinto consigue su MEJOR POSICIÓN HISTÓRICA:
+              <strong className={styles.highlightP6}> ¡P6!</strong>
+              Sumando{" "}
+              <strong className={styles.highlightPoints}>8 puntos</strong> en
+              una carrera increíble
+            </span>
+            <span className={styles.bannerEmoji}>🇦🇷🏎️💨</span>
+          </div>
+        </section>
+
+        {/* ── TICKER CORREDIZO ── */}
+        <div className={styles.tickerWrapper}>
+          <div className={styles.ticker}>
+            <div className={styles.tickerContent}>
+              🏆 ¡HISTÓRICO! 🏆 Franco Colapinto logra su MEJOR POSICIÓN hasta
+              la fecha:
+              <strong className={styles.tickerP6}> ¡P6!</strong> Sumando
+              <strong className={styles.tickerPoints}> 8 PUNTOS</strong> 🇦🇷🏎️✨
+              • 🌟 El argentino brilla en F1 • 🏁 Supera su propio récord • 💪
+              Demuestra todo su talento • 🇦🇷 Orgullo argentino en la máxima
+              categoría • 🔥 La carrera más emocionante de la temporada • 📈
+              Sube en el campeonato de pilotos • 🎯 Objetivo: seguir sumando
+              puntos •
+            </div>
+          </div>
+        </div>
 
         {/* ── LAST RACE ── */}
         <section className={styles.section}>
@@ -190,7 +228,7 @@ export default function Home() {
 
             <div className={styles.nextCard}>
               <div className={styles.nextLabel}>A continuación</div>
-              <div className={styles.nextLabel}>Nos vemos en Canada PÁ</div>
+              <div className={styles.nextLabel}>Nos vemos en {nextRace2026.gp} PÁ</div>
               <div className={styles.nextFlag}>{nextRace2026.flag}</div>
               <div className={styles.nextGp}>{nextRace2026.gp}</div>
               <div className={styles.nextMeta}>
@@ -235,35 +273,55 @@ export default function Home() {
               alt="Auto V8 saliendo"
             />
             <div className={styles.playIcon}>▶</div>
-            <img src="/circuits/logof1.webp" alt="Imagen de Colapinto" className={styles.f1Logo} />
+            <img
+              src="/circuits/logof1.webp"
+              alt="Imagen de Colapinto"
+              className={styles.f1Logo}
+            />
           </div>
           <div className={styles.expoCard}>
             <img
               src="https://res.cloudinary.com/dduqetzqk/image/upload/v1779123860/SnapInsta.to_675363519_18585799504008402_5494057017362921771_n_xi9n70.jpg"
               alt="Auto V8 saliendo"
             />
-            <img src="/circuits/logof1.webp" alt="Imagen de Colapinto" className={styles.f1Logo} />
+            <img
+              src="/circuits/logof1.webp"
+              alt="Imagen de Colapinto"
+              className={styles.f1Logo}
+            />
           </div>
           <div className={styles.expoCard}>
             <img
               src="https://res.cloudinary.com/dduqetzqk/image/upload/v1779123865/SnapInsta.to_682115355_18585799495008402_8730395449085486051_n_bx74jw.jpg"
               alt="Colapinto con los autos"
             />
-            <img src="/circuits/logof1.webp" alt="Imagen de Colapinto" className={styles.f1Logo} />
+            <img
+              src="/circuits/logof1.webp"
+              alt="Imagen de Colapinto"
+              className={styles.f1Logo}
+            />
           </div>
           <div className={styles.expoCard}>
             <img
               src="https://res.cloudinary.com/dduqetzqk/image/upload/v1779123845/SnapInsta.to_675460992_18585799585008402_8306726373912183576_n_qu8tbh.jpg"
               alt="Colapinto con los autos"
             />
-            <img src="/circuits/logof1.webp" alt="Imagen de Colapinto" className={styles.f1Logo} />
+            <img
+              src="/circuits/logof1.webp"
+              alt="Imagen de Colapinto"
+              className={styles.f1Logo}
+            />
           </div>
           <div className={styles.expoCard}>
             <img
               src="https://res.cloudinary.com/dduqetzqk/image/upload/v1779123838/SnapInsta.to_682077512_18585799573008402_8721296666406986794_n_famdxe.jpg"
               alt="Colapinto con los autos"
             />
-            <img src="/circuits/logof1.webp" alt="Imagen de Colapinto" className={styles.f1Logo} />
+            <img
+              src="/circuits/logof1.webp"
+              alt="Imagen de Colapinto"
+              className={styles.f1Logo}
+            />
           </div>
         </div>
       </section>

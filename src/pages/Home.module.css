@@ -533,3 +533,187 @@
     text-align: left;
   }
 }
+
+/* Banner estático destacado */
+.historicBanner {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  border: 2px solid #ffd700;
+  border-radius: 16px;
+  margin: 2rem 0 1.5rem 0;
+  padding: 1.25rem;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2), 0 0 15px rgba(255,215,0,0.3);
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 10px rgba(255,215,0,0.3);
+    border-color: #ffd700;
+  }
+  to {
+    box-shadow: 0 0 25px rgba(255,215,0,0.6);
+    border-color: #ffed4a;
+  }
+}
+
+.bannerContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.bannerBadge {
+  background: #ffd700;
+  color: #1a1a2e;
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+.bannerText {
+  flex: 1;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #fff;
+  text-align: center;
+}
+
+.highlightP6 {
+  font-size: 1.4rem;
+  color: #ffd700;
+  font-weight: bold;
+  margin: 0 0.25rem;
+  text-shadow: 0 0 5px rgba(255,215,0,0.5);
+}
+
+.highlightPoints {
+  font-size: 1.2rem;
+  color: #4caf50;
+  font-weight: bold;
+  margin: 0 0.25rem;
+}
+
+.bannerEmoji {
+  font-size: 2rem;
+  white-space: nowrap;
+}
+
+/* Ticker corredizo */
+.tickerWrapper {
+  background: linear-gradient(90deg, #0f0c29, #302b63, #24243e);
+  border-radius: 12px;
+  margin: 1.5rem 0 2rem 0;
+  overflow: hidden;
+  padding: 0.75rem 0;
+  border: 1px solid rgba(255,215,0,0.3);
+  position: relative;
+}
+
+.tickerWrapper::before,
+.tickerWrapper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 50px;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.tickerWrapper::before {
+  left: 0;
+  background: linear-gradient(90deg, #0f0c29, transparent);
+}
+
+.tickerWrapper::after {
+  right: 0;
+  background: linear-gradient(270deg, #24243e, transparent);
+}
+
+.ticker {
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+}
+
+.tickerContent {
+  display: inline-block;
+  animation: tickerScroll 25s linear infinite;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #fff;
+  letter-spacing: 0.5px;
+  padding-right: 50px;
+}
+
+.tickerContent:hover {
+  animation-play-state: paused;
+}
+
+@keyframes tickerScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.tickerP6 {
+  color: #ffd700;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin: 0 0.25rem;
+  display: inline-block;
+  animation: pulse 1s ease-in-out infinite;
+}
+
+.tickerPoints {
+  color: #4caf50;
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin: 0 0.25rem;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .bannerContent {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .bannerText {
+    font-size: 0.9rem;
+  }
+  
+  .highlightP6 {
+    font-size: 1.2rem;
+  }
+  
+  .highlightPoints {
+    font-size: 1rem;
+  }
+  
+  .tickerContent {
+    font-size: 0.85rem;
+    animation-duration: 20s;
+  }
+  
+  .tickerP6 {
+    font-size: 1rem;
+  }
+}

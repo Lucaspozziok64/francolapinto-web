@@ -65,16 +65,20 @@
       "pts": 6,
       "grid": 8,
       "status": "Finished"
-    }
-  ],
-  "upcoming": [
+    },
     {
       "round": 7,
       "gp": "Gran Premio de Canadá",
       "flag": "🇨🇦",
       "circuit": "Montreal (Sprint)",
-      "date": "22-24 May 2026"
-    },
+      "date": "22-24 May 2026",
+      "pos": 6,
+      "pts": 8,
+      "grid": 10,
+      "status": "Finished"
+    }
+  ],
+  "upcoming": [
     {
       "round": 8,
       "gp": "Gran Premio de Mónaco",
