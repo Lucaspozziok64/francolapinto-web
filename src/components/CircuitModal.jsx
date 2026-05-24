@@ -125,7 +125,7 @@ const CircuitModal = ({ isOpen, onClose, gpData }) => {
         qualySprint: "Viernes 22 May - 17:30",
         sprint: "Sábado 23 May - 13:00",
         qualy: "Sábado 23 May - 17:00",
-        race: "Domingo 24 May - 15:00",
+        race: "Domingo 24 May - 17:00",
       },
       Monaco: {
         fp1: "Jueves 5 Jun - 08:30",
