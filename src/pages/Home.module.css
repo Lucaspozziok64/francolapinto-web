@@ -717,3 +717,245 @@
     font-size: 1rem;
   }
 }
+
+/* Sección de Cumpleaños */
+.birthdaySection {
+  padding: 0 40px;
+  margin: 48px 0 40px 0;
+}
+
+.birthdayCard {
+  background: linear-gradient(135deg, #1a0b2e 0%, #2d1b4e 50%, #1a0b2e 100%);
+  border: 2px solid;
+  border-image: linear-gradient(45deg, #ff6b6b, #ffd700, #ff6b6b) 1;
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3), 0 0 20px rgba(255,215,0,0.2);
+  animation: birthdayPulse 2s ease-in-out infinite alternate;
+}
+
+@keyframes birthdayPulse {
+  from {
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3), 0 0 10px rgba(255,215,0,0.2);
+    transform: scale(1);
+  }
+  to {
+    box-shadow: 0 15px 40px rgba(0,0,0,0.4), 0 0 25px rgba(255,215,0,0.4);
+    transform: scale(1.01);
+  }
+}
+
+.birthdayContent {
+  padding: 2rem;
+}
+
+.birthdayHeader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.birthdayCake,
+.birthdayBalloon {
+  font-size: 2.5rem;
+  animation: bounce 1s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.birthdayTitle {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 2rem;
+  letter-spacing: 2px;
+  background: linear-gradient(135deg, #ffd700, #ff6b6b, #ffd700);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: gradientShift 3s linear infinite;
+  margin: 0;
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+.birthdayMessage {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.birthdayText {
+  font-size: 1.2rem;
+  color: #fff;
+  margin-bottom: 0.5rem;
+  line-height: 1.5;
+}
+
+.birthdayText strong {
+  color: #ffd700;
+  font-size: 1.3rem;
+}
+
+.birthdaySubtext {
+  font-size: 1rem;
+  color: #ffb6c1;
+  font-style: italic;
+}
+
+.birthdayVideoContainer {
+  max-width: 800px;
+  margin: 0 auto 2rem auto;
+}
+
+.birthdayVideoCard {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+}
+
+.birthdayVideoCard:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+.birthdayVideoThumb {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+}
+
+.birthdayPlayOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  transition: background 0.3s ease;
+}
+
+.birthdayVideoCard:hover .birthdayPlayOverlay {
+  background: rgba(0,0,0,0.3);
+}
+
+.birthdayPlayIcon {
+  width: 70px;
+  height: 70px;
+  background: rgba(255, 215, 0, 0.9);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: #1a0b2e;
+  transition: transform 0.3s ease;
+}
+
+.birthdayVideoCard:hover .birthdayPlayIcon {
+  transform: scale(1.1);
+  background: #ffd700;
+}
+
+.birthdayVideoLabel {
+  background: rgba(0,0,0,0.7);
+  padding: 0.5rem 1rem;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: #ffd700;
+  backdrop-filter: blur(5px);
+}
+
+.birthdayFooter {
+  text-align: center;
+}
+
+.birthdayHashtags {
+  font-size: 0.85rem;
+  color: #ffb6c1;
+  margin-bottom: 0.75rem;
+  letter-spacing: 0.5px;
+}
+
+.birthdayConfetti {
+  font-size: 1.2rem;
+  animation: confettiSpin 4s linear infinite;
+}
+
+@keyframes confettiSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive para birthday section */
+@media (max-width: 768px) {
+  .birthdaySection {
+    padding: 0 20px;
+    margin: 32px 0 32px 0;
+  }
+  
+  .birthdayContent {
+    padding: 1.5rem;
+  }
+  
+  .birthdayTitle {
+    font-size: 1.5rem;
+  }
+  
+  .birthdayCake,
+  .birthdayBalloon {
+    font-size: 1.8rem;
+  }
+  
+  .birthdayText {
+    font-size: 1rem;
+  }
+  
+  .birthdayText strong {
+    font-size: 1.1rem;
+  }
+  
+  .birthdayPlayIcon {
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+  }
+  
+  .birthdayVideoLabel {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.8rem;
+  }
+  
+  .birthdayHashtags {
+    font-size: 0.7rem;
+  }
+}

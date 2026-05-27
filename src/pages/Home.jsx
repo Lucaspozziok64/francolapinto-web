@@ -48,6 +48,11 @@ export default function Home() {
       setCurrentVideoSrc(
         "https://res.cloudinary.com/dduqetzqk/video/upload/v1779128611/SnapInsta.to_AQNWmmutSWPpj70giQ_v1U4s05OQzMwYaeiWjyYTyjlm9UFngW74-l9sVRzhRd6rieuA48L8ok7_Dwr1--hQ1Hrq5-5go2w4CO75WzY_iklecr.mp4",
       );
+    } else if (videoKey === "birthday") {
+      // Video especial de cumpleaños - Usá tu URL aquí
+      setCurrentVideoSrc(
+        "https://res.cloudinary.com/dduqetzqk/video/upload/v1779921729/SnapInsta.to_AQOvH9eAQSqt-7KRseA4fOfsMTMYmATWxMQpdz83-0MFtvUZC1L2PQzaIJ2L7Tp5bt5elXgaK4EOew98ljoJ33FZVPWdzAPbIag_wRA_vy8net.mp4",
+      );
     }
     setModalOpen(true);
   }
@@ -228,7 +233,9 @@ export default function Home() {
 
             <div className={styles.nextCard}>
               <div className={styles.nextLabel}>A continuación</div>
-              <div className={styles.nextLabel}>Nos vemos en {nextRace2026.gp} PÁ</div>
+              <div className={styles.nextLabel}>
+                Nos vemos en {nextRace2026.gp} PÁ
+              </div>
               <div className={styles.nextFlag}>{nextRace2026.flag}</div>
               <div className={styles.nextGp}>{nextRace2026.gp}</div>
               <div className={styles.nextMeta}>
@@ -263,6 +270,57 @@ export default function Home() {
           </div>
         </section>
       </div>
+
+      {/* ── CUMPLEAÑOS DE FRANCO COLAPINTO ── */}
+      <section className={styles.birthdaySection}>
+        <SectionLabel>🎂 ¡Feliz Cumpleaños Franco! 🎂</SectionLabel>
+
+        <div className={styles.birthdayCard}>
+          <div className={styles.birthdayContent}>
+            <div className={styles.birthdayHeader}>
+              <span className={styles.birthdayCake}>🎂</span>
+              <h2 className={styles.birthdayTitle}>#FelizCumpleFranco</h2>
+              <span className={styles.birthdayBalloon}>🎈</span>
+            </div>
+
+            <div className={styles.birthdayMessage}>
+              <p className={styles.birthdayText}>
+                🇦🇷 <strong>Franco Colapinto</strong> cumple años hoy y lo
+                celebramos con este momento especial 🏎️💨
+              </p>
+              <p className={styles.birthdaySubtext}>
+                ¡Desde Argentina con todo el cariño para nuestro piloto de F1!
+                🎉🏆
+              </p>
+            </div>
+
+            <div className={styles.birthdayVideoContainer}>
+              <div
+                className={styles.birthdayVideoCard}
+                onClick={() => openModal("birthday")}
+              >
+                <img
+                  src="https://res.cloudinary.com/dduqetzqk/image/upload/v1779120810/SnapInsta.to_674549225_18585799516008402_2389487927485289870_n_1080_ugzxlv.jpg"
+                  alt="Franco Colapinto celebrando"
+                  className={styles.birthdayVideoThumb}
+                />
+                <div className={styles.birthdayPlayOverlay}>
+                  <div className={styles.birthdayPlayIcon}>▶</div>
+                  <span className={styles.birthdayVideoLabel}>
+                    🎬 Video especial de cumpleaños
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div className={styles.birthdayFooter}>
+              <div className={styles.birthdayHashtags}>
+                #FelizCumpleFranco #Colapinto #F1 #Alpine #ArgentinaEnF1
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       {/* ── EXHIBICIÓN BS AS ── */}
       <section className={styles.section}>
         <SectionLabel>🇦🇷 Colapinto en las calles de CABA</SectionLabel>
