@@ -27,7 +27,7 @@
     <!-- Manifest para PWA -->
     <link rel="manifest" href="/manifest.json" />
 
-     <!-- Open Graph para compartir en redes -->
+    <!-- Open Graph para compartir en redes -->
     <meta
       property="og:title"
       content="Franco Colapinto #43 - Carreras y Historia"
@@ -58,6 +58,20 @@
       content="https://francolapa43.netlify.app/favicon.svg"
     />
   </head>
+  <!-- Google tag (gtag.js) -->
+  <script
+    async
+    src="https://www.googletagmanager.com/gtag/js?id=G-NVMDWWY3X4"
+  ></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+
+    gtag("config", "G-NVMDWWY3X4");
+  </script>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
