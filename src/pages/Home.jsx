@@ -125,21 +125,6 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Opción A: Banner estático (más profesional) */}
-        <section className={styles.historicBanner}>
-          <div className={styles.bannerContent}>
-            <span className={styles.bannerBadge}>🏆 HISTÓRICO</span>
-            <span className={styles.bannerText}>
-              Franco Colapinto consigue su MEJOR POSICIÓN HISTÓRICA:
-              <strong className={styles.highlightP6}> ¡P6!</strong>
-              Sumando{" "}
-              <strong className={styles.highlightPoints}>8 puntos</strong> en
-              una carrera increíble
-            </span>
-            <span className={styles.bannerEmoji}>🇦🇷🏎️💨</span>
-          </div>
-        </section>
-
         {/* ── TICKER CORREDIZO ── */}
         <div className={styles.tickerWrapper}>
           <div className={styles.ticker}>
@@ -150,7 +135,7 @@ export default function Home() {
               <strong className={styles.tickerPoints}> 8 PUNTOS</strong> 🇦🇷🏎️✨
               • 🌟 El argentino brilla en F1 • 🏁 Supera su propio récord • 💪
               Demuestra todo su talento • 🇦🇷 Orgullo argentino en la máxima
-              categoría • 🔥 La carrera más emocionante de la temporada • 📈
+              categoría • 🔥 La carrera más emocionante de la temporada sucedio en Canadá • 📈
               Sube en el campeonato de pilotos • 🎯 Objetivo: seguir sumando
               puntos •
             </div>
@@ -270,57 +255,6 @@ export default function Home() {
           </div>
         </section>
       </div>
-
-      {/* ── CUMPLEAÑOS DE FRANCO COLAPINTO ── */}
-      <section className={styles.birthdaySection}>
-        <SectionLabel>🎂 ¡Feliz Cumpleaños Franco! 🎂</SectionLabel>
-
-        <div className={styles.birthdayCard}>
-          <div className={styles.birthdayContent}>
-            <div className={styles.birthdayHeader}>
-              <span className={styles.birthdayCake}>🎂</span>
-              <h2 className={styles.birthdayTitle}>#FelizCumpleFranco</h2>
-              <span className={styles.birthdayBalloon}>🎈</span>
-            </div>
-
-            <div className={styles.birthdayMessage}>
-              <p className={styles.birthdayText}>
-                🇦🇷 <strong>Franco Colapinto</strong> cumple años hoy y lo
-                celebramos con este momento especial 🏎️💨
-              </p>
-              <p className={styles.birthdaySubtext}>
-                ¡Desde Argentina con todo el cariño para nuestro piloto de F1!
-                🎉🏆
-              </p>
-            </div>
-
-            <div className={styles.birthdayVideoContainer}>
-              <div
-                className={styles.birthdayVideoCard}
-                onClick={() => openModal("birthday")}
-              >
-                <img
-                  src="https://res.cloudinary.com/dduqetzqk/image/upload/v1779120810/SnapInsta.to_674549225_18585799516008402_2389487927485289870_n_1080_ugzxlv.jpg"
-                  alt="Franco Colapinto celebrando"
-                  className={styles.birthdayVideoThumb}
-                />
-                <div className={styles.birthdayPlayOverlay}>
-                  <div className={styles.birthdayPlayIcon}>▶</div>
-                  <span className={styles.birthdayVideoLabel}>
-                    🎬 Video especial de cumpleaños
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            <div className={styles.birthdayFooter}>
-              <div className={styles.birthdayHashtags}>
-                #FelizCumpleFranco #Colapinto #F1 #Alpine #ArgentinaEnF1
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
       {/* ── EXHIBICIÓN BS AS ── */}
       <section className={styles.section}>
         <SectionLabel>🇦🇷 Colapinto en las calles de CABA</SectionLabel>
